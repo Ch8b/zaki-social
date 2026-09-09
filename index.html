@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b10">
+<title>ZAKI DJOUDI | Social Links</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,Tahoma,sans-serif;background:radial-gradient(circle at 50% 0,#182235 0,#090b10 45%,#050608 100%);color:#fff;display:flex;justify-content:center;padding:28px 14px}
+.card{width:min(520px,100%);text-align:center;padding:28px 18px 24px;border:1px solid #ffffff18;border-radius:28px;background:#ffffff08;backdrop-filter:blur(18px);box-shadow:0 25px 70px #0008}
+.avatar{width:104px;height:104px;border-radius:50%;margin:auto;border:2px solid #ffffff55;display:grid;place-items:center;background:linear-gradient(145deg,#1e293b,#080a0e);font-size:30px;font-weight:800;letter-spacing:2px}
+h1{margin:18px 0 6px;font-size:30px;letter-spacing:1px}.sub{margin:0 0 22px;color:#b8c0cc;font-size:15px}
+.links{display:grid;gap:12px}.link{display:flex;align-items:center;gap:13px;text-decoration:none;color:white;padding:15px 17px;border:1px solid #ffffff16;border-radius:17px;background:#ffffff0b;transition:.25s;box-shadow:0 8px 25px #0002}.link:hover{transform:translateY(-3px);background:#ffffff14;border-color:#ffffff30}.icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#ffffff12;font-weight:800}.label{font-size:16px;font-weight:700}.arrow{margin-right:auto;color:#8993a4}
+.tools{display:flex;gap:10px;margin-top:18px}.tools button{flex:1;border:1px solid #ffffff18;border-radius:14px;padding:12px;background:#ffffff0a;color:#fff;cursor:pointer}.tools button:hover{background:#ffffff16}
+.qrbox{margin-top:24px;padding:18px;border-radius:20px;background:#fff;color:#111}.qrbox img{width:210px;max-width:70%;display:block;margin:10px auto}.qrtitle{font-weight:800}.note{font-size:12px;color:#666;margin-top:8px}
+footer{margin-top:20px;color:#6f7785;font-size:12px}
+@media(max-width:420px){h1{font-size:26px}.card{padding:24px 14px}}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="avatar" aria-label="ZAKI DJOUDI">ZJ</div>
+  <h1>ZAKI DJOUDI</h1>
+  <p class="sub">تابعني على مواقع التواصل الاجتماعي</p>
+
+  <section class="links">
+    <a class="link" href="https://t.me/zaki_djoudi" target="_blank" rel="noopener"><span class="icon">TG</span><span class="label">Telegram</span><span class="arrow">←</span></a>
+    <a class="link" href="https://www.facebook.com/profile.php?id=61578967206608" target="_blank" rel="noopener"><span class="icon">f</span><span class="label">Facebook</span><span class="arrow">←</span></a>
+    <a class="link" href="https://www.instagram.com/zake.djoudi" target="_blank" rel="noopener"><span class="icon">IG</span><span class="label">Instagram</span><span class="arrow">←</span></a>
+    <a class="link" href="https://www.tiktok.com/@zakimotionart" target="_blank" rel="noopener"><span class="icon">TT</span><span class="label">TikTok</span><span class="arrow">←</span></a>
+  </section>
+
+  <div class="tools">
+    <button onclick="sharePage()">مشاركة الصفحة</button>
+    <button onclick="copyPage()">نسخ الرابط</button>
+  </div>
+
+  <section class="qrbox">
+    <div class="qrtitle">امسح الكود للوصول إلى جميع حساباتي</div>
+    <img id="qr" alt="QR Code">
+    <button onclick="downloadQR()" style="border:0;border-radius:12px;padding:11px 18px;background:#111;color:#fff;cursor:pointer">تحميل QR Code PNG</button>
+    <div class="note">يتم توليد الكود تلقائيًا من رابط الصفحة الحالية.</div>
+  </section>
+  <footer>ZAKI DJOUDI • Digital Social Card</footer>
+</main>
+
+<script>
+const pageUrl = location.href;
+const qr = document.getElementById('qr');
+qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=12&data=' + encodeURIComponent(pageUrl);
+
+async function copyPage(){try{await navigator.clipboard.writeText(location.href);alert('تم نسخ رابط الصفحة');}catch(e){prompt('انسخ الرابط:',location.href)}}
+async function sharePage(){if(navigator.share){try{await navigator.share({title:'ZAKI DJOUDI',text:'جميع حساباتي على مواقع التواصل',url:location.href})}catch(e){}}else copyPage()}
+function downloadQR(){const a=document.createElement('a');a.href=qr.src;a.download='ZAKI-DJOUDI-QR.png';a.target='_blank';a.click()}
+</script>
+</body>
+</html>
