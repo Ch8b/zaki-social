@@ -3,55 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090b10">
-<title>ZAKI DJOUDI | Social Links</title>
+<meta name="theme-color" content="#070b12">
+<meta name="description" content="Zaki Djoudi.Com — جميع حسابات Zaki Djoudi في مكان واحد">
+<title>Zaki Djoudi.Com | Social Links</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,Tahoma,sans-serif;background:radial-gradient(circle at 50% 0,#182235 0,#090b10 45%,#050608 100%);color:#fff;display:flex;justify-content:center;padding:28px 14px}
-.card{width:min(520px,100%);text-align:center;padding:28px 18px 24px;border:1px solid #ffffff18;border-radius:28px;background:#ffffff08;backdrop-filter:blur(18px);box-shadow:0 25px 70px #0008}
-.avatar{width:104px;height:104px;border-radius:50%;margin:auto;border:2px solid #ffffff55;display:grid;place-items:center;background:linear-gradient(145deg,#1e293b,#080a0e);font-size:30px;font-weight:800;letter-spacing:2px}
-h1{margin:18px 0 6px;font-size:30px;letter-spacing:1px}.sub{margin:0 0 22px;color:#b8c0cc;font-size:15px}
-.links{display:grid;gap:12px}.link{display:flex;align-items:center;gap:13px;text-decoration:none;color:white;padding:15px 17px;border:1px solid #ffffff16;border-radius:17px;background:#ffffff0b;transition:.25s;box-shadow:0 8px 25px #0002}.link:hover{transform:translateY(-3px);background:#ffffff14;border-color:#ffffff30}.icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#ffffff12;font-weight:800}.label{font-size:16px;font-weight:700}.arrow{margin-right:auto;color:#8993a4}
-.tools{display:flex;gap:10px;margin-top:18px}.tools button{flex:1;border:1px solid #ffffff18;border-radius:14px;padding:12px;background:#ffffff0a;color:#fff;cursor:pointer}.tools button:hover{background:#ffffff16}
-.qrbox{margin-top:24px;padding:18px;border-radius:20px;background:#fff;color:#111}.qrbox img{width:210px;max-width:70%;display:block;margin:10px auto}.qrtitle{font-weight:800}.note{font-size:12px;color:#666;margin-top:8px}
-footer{margin-top:20px;color:#6f7785;font-size:12px}
-@media(max-width:420px){h1{font-size:26px}.card{padding:24px 14px}}
+:root{
+  --bg:#05080d;
+  --panel:rgba(13,19,29,.78);
+  --panel2:rgba(255,255,255,.055);
+  --line:rgba(255,255,255,.12);
+  --text:#f5f7fa;
+  --muted:#aab3c0;
+  --gold:#d7a657;
+  --gold2:#f0c878;
+  --shadow:0 28px 80px rgba(0,0,0,.48);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Arial,Tahoma,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 50% -10%,#1a2a40 0,transparent 40%),
+    radial-gradient(circle at 0 80%,rgba(215,166,87,.08),transparent 30%),
+    var(--bg);
+}
+a{text-decoration:none;color:inherit}
+.page{
+  width:min(720px,100%);
+  margin:auto;
+  padding:18px 14px 35px;
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:8px 4px 18px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  font-family:Georgia,serif;
+  letter-spacing:.8px;
+}
+.logo{
+  width:46px;height:46px;border:1px solid rgba(215,166,87,.7);
+  border-radius:50%;display:grid;place-items:center;
+  color:var(--gold2);font-size:18px;font-weight:bold;
+  background:rgba(215,166,87,.06);
+}
+.brand strong{font-size:18px}
+.brand span{color:var(--gold2)}
+.topline{color:#8e98a7;font-size:11px;letter-spacing:3px;white-space:nowrap}
+
+.hero{
+  position:relative;overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  box-shadow:var(--shadow);
+}
+.hero-photo{
+  position:relative;height:410px;overflow:hidden;
+  background:#101722;
+}
+.hero-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center 34%;
+  display:block;
+  filter:saturate(1.05) contrast(1.03);
+}
+.hero-photo:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.04) 35%,rgba(5,8,13,.25) 55%,#080b11 100%);
+}
+.hero-info{
+  position:relative;
+  margin-top:-92px;
+  padding:0 24px 25px;
+  z-index:2;
+  text-align:center;
+}
+.initials{
+  width:76px;height:76px;margin:0 auto 12px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  border:2px solid var(--gold);
+  background:#080c12;
+  box-shadow:0 0 0 6px rgba(215,166,87,.08),0 12px 35px rgba(0,0,0,.45);
+  color:var(--gold2);font-family:Georgia,serif;font-size:25px;
+}
+h1{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,8vw,52px);
+  letter-spacing:1px;
+}
+h1 span{color:var(--gold2)}
+.tag{
+  margin:9px 0 0;
+  color:#d2d8e0;
+  font-size:13px;
+  letter-spacing:3px;
+}
+.quote{
+  max-width:510px;margin:16px auto 0;
+  color:var(--muted);line-height:1.8;font-size:14px;
+}
+.divider{
+  width:70px;height:1px;background:var(--gold);
+  margin:19px auto 0;opacity:.75;
+}
+
+.section-title{
+  display:flex;align-items:center;gap:12px;
+  margin:28px 5px 13px;
+  color:#e9edf2;font-family:Georgia,serif;
+  letter-spacing:2px;font-size:16px;
+}
+.section-title:before,.section-title:after{
+  content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold));
+}
+.section-title:after{background:linear-gradient(90deg,var(--gold),transparent)}
+
+.links{display:grid;gap:12px}
+.social{
+  position:relative;display:flex;align-items:center;
+  gap:14px;min-height:76px;padding:13px 15px;
+  border:1px solid var(--line);border-radius:19px;
+  background:linear-gradient(100deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+  overflow:hidden;transition:.25s ease;
+}
+.social:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,var(--accent),transparent 52%);
+  opacity:.08;pointer-events:none;
+}
+.social:hover,.social:active{
+  transform:translateY(-2px);
+  border-color:color-mix(in srgb,var(--accent) 65%,white 10%);
+  box-shadow:0 14px 35px rgba(0,0,0,.25);
+}
+.icon{
+  flex:0 0 48px;width:48px;height:48px;border-radius:15px;
+  display:grid;place-items:center;
+  background:var(--accent);color:white;
+  box-shadow:0 7px 20px color-mix(in srgb,var(--accent) 25%,transparent);
+}
+.icon svg{width:27px;height:27px;fill:currentColor}
+.info{flex:1;text-align:right;min-width:0}
+.name{font-size:16px;font-weight:800}
+.handle{font-size:12px;color:#9ea8b5;margin-top:5px;direction:ltr;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arrow{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--line);display:grid;place-items:center;
+  color:#dce2e9;font-size:17px;
+}
+
+.actions{display:flex;gap:10px;margin-top:16px}
+.action{
+  flex:1;padding:12px;border-radius:14px;
+  border:1px solid var(--line);background:var(--panel2);
+  color:#fff;cursor:pointer;font-size:13px;font-weight:700;
+}
+.action:hover{background:rgba(255,255,255,.1)}
+
+.qrbox{
+  margin-top:20px;padding:21px;border-radius:22px;
+  background:#fff;color:#101318;text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,.28);
+}
+.qrbox h2{margin:0;font-family:Georgia,serif;font-size:18px}
+.qrbox p{margin:7px 0 12px;color:#68717d;font-size:12px}
+.qrbox img{display:block;width:210px;max-width:72%;margin:10px auto;border-radius:8px}
+.qrbtn{
+  border:0;border-radius:12px;padding:11px 18px;
+  background:#11151b;color:white;font-weight:700;cursor:pointer;
+}
+.qrnote{font-size:10px;color:#858c96;margin-top:9px}
+
+.footer{
+  text-align:center;padding:25px 0 5px;color:#6f7885;font-size:11px;
+  letter-spacing:1px;
+}
+.footer strong{color:var(--gold2)}
+@media(max-width:480px){
+  .page{padding:10px 10px 25px}
+  .hero-photo{height:350px}
+  .hero-info{padding:0 17px 22px;margin-top:-72px}
+  .topline{display:none}
+  .social{min-height:72px}
+}
 </style>
 </head>
+
 <body>
-<main class="card">
-  <div class="avatar" aria-label="ZAKI DJOUDI">ZJ</div>
-  <h1>ZAKI DJOUDI</h1>
-  <p class="sub">تابعني على مواقع التواصل الاجتماعي</p>
+<div class="page">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">ZD</div>
+      <div><strong>Zaki <span>Djoudi</span>.Com</strong></div>
+    </div>
+    <div class="topline">DREAM • CREATE • ACHIEVE</div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-photo">
+      <img src="zaki-profile.webp" alt="Zaki Djoudi">
+    </div>
+
+    <div class="hero-info">
+      <div class="initials">ZD</div>
+      <h1>Zaki <span>Djoudi.Com</span></h1>
+      <p class="tag">PHOTOGRAPHER &nbsp;|&nbsp; STUDENT &nbsp;|&nbsp; CREATOR</p>
+      <p class="quote">التصوير بالنسبة لي ليس مجرد صورة؛ بل طريقة لرؤية التفاصيل التي قد لا يراها الآخرون.</p>
+      <div class="divider"></div>
+    </div>
+  </main>
+
+  <div class="section-title">FOLLOW ME</div>
 
   <section class="links">
-    <a class="link" href="https://t.me/zaki_djoudi" target="_blank" rel="noopener"><span class="icon">TG</span><span class="label">Telegram</span><span class="arrow">←</span></a>
-    <a class="link" href="https://www.facebook.com/profile.php?id=61578967206608" target="_blank" rel="noopener"><span class="icon">f</span><span class="label">Facebook</span><span class="arrow">←</span></a>
-    <a class="link" href="https://www.instagram.com/zake.djoudi" target="_blank" rel="noopener"><span class="icon">IG</span><span class="label">Instagram</span><span class="arrow">←</span></a>
-    <a class="link" href="https://www.tiktok.com/@zakimotionart" target="_blank" rel="noopener"><span class="icon">TT</span><span class="label">TikTok</span><span class="arrow">←</span></a>
+
+    <!-- Telegram -->
+    <a class="social" style="--accent:#229ED9" href="https://t.me/zaki_djoudi" target="_blank" rel="noopener">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 4.1 18.7 19c-.23 1.05-.85 1.3-1.72.81l-4.75-3.5-2.29 2.2c-.25.25-.46.46-.94.46l.34-4.84 8.81-7.96c.38-.34-.08-.53-.59-.19L6.66 12.86 1.98 11.4c-1.02-.32-1.04-1.02.21-1.49L20.48 2.8c.86-.32 1.62.2 1.32 1.3Z"/></svg>
+      </div>
+      <div class="info"><div class="name">Telegram</div><div class="handle">@zaki_djoudi</div></div>
+      <div class="arrow">←</div>
+    </a>
+
+    <!-- Facebook -->
+    <a class="social" style="--accent:#1877F2" href="https://www.facebook.com/profile.php?id=61578967206608" target="_blank" rel="noopener">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.5-1.46h1.7V4a22 22 0 0 0-2.48-.13c-2.46 0-4.14 1.5-4.14 4.25V10H7.3v3h2.78v8h3.42Z"/></svg>
+      </div>
+      <div class="info"><div class="name">Facebook</div><div class="handle">Zaki Djoudi</div></div>
+      <div class="arrow">←</div>
+    </a>
+
+    <!-- Instagram -->
+    <a class="social" style="--accent:#E1306C" href="https://www.instagram.com/zake.djoudi" target="_blank" rel="noopener">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 2h9.2A5.4 5.4 0 0 1 22 7.4v9.2a5.4 5.4 0 0 1-5.4 5.4H7.4A5.4 5.4 0 0 1 2 16.6V7.4A5.4 5.4 0 0 1 7.4 2Zm-.2 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm9.55 1.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+      </div>
+      <div class="info"><div class="name">Instagram</div><div class="handle">@zake.djoudi</div></div>
+      <div class="arrow">←</div>
+    </a>
+
+    <!-- TikTok -->
+    <a class="social" style="--accent:#111827" href="https://www.tiktok.com/@zakimotionart" target="_blank" rel="noopener">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 2h3.1c.2 1.7 1.2 3.3 2.8 4.1v3.1a8.2 8.2 0 0 1-2.8-1V14a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.2a3 3 0 1 0 1.7 2.7V2Z"/></svg>
+      </div>
+      <div class="info"><div class="name">TikTok</div><div class="handle">@zakimotionart</div></div>
+      <div class="arrow">←</div>
+    </a>
+
   </section>
 
-  <div class="tools">
-    <button onclick="sharePage()">مشاركة الصفحة</button>
-    <button onclick="copyPage()">نسخ الرابط</button>
+  <div class="actions">
+    <button class="action" onclick="sharePage()">مشاركة الصفحة</button>
+    <button class="action" onclick="copyPage()">نسخ الرابط</button>
   </div>
 
   <section class="qrbox">
-    <div class="qrtitle">امسح الكود للوصول إلى جميع حساباتي</div>
+    <h2>جميع حساباتي في QR واحد</h2>
+    <p>امسح الكود لفتح هذه الصفحة واختيار الحساب الذي تريد متابعته.</p>
     <img id="qr" alt="QR Code">
-    <button onclick="downloadQR()" style="border:0;border-radius:12px;padding:11px 18px;background:#111;color:#fff;cursor:pointer">تحميل QR Code PNG</button>
-    <div class="note">يتم توليد الكود تلقائيًا من رابط الصفحة الحالية.</div>
+    <button class="qrbtn" onclick="downloadQR()">تحميل QR Code</button>
+    <div class="qrnote">يتم إنشاء QR تلقائيًا من رابط الصفحة الحالية.</div>
   </section>
-  <footer>ZAKI DJOUDI • Digital Social Card</footer>
-</main>
+
+  <footer class="footer">
+    <strong>ZAKI DJOUDI.COM</strong><br>
+    ALGERIA • MENA • THE WORLD
+  </footer>
+
+</div>
 
 <script>
 const pageUrl = location.href;
-const qr = document.getElementById('qr');
-qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=12&data=' + encodeURIComponent(pageUrl);
+const qr = document.getElementById("qr");
+qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=12&data=" + encodeURIComponent(pageUrl);
 
-async function copyPage(){try{await navigator.clipboard.writeText(location.href);alert('تم نسخ رابط الصفحة');}catch(e){prompt('انسخ الرابط:',location.href)}}
-async function sharePage(){if(navigator.share){try{await navigator.share({title:'ZAKI DJOUDI',text:'جميع حساباتي على مواقع التواصل',url:location.href})}catch(e){}}else copyPage()}
-function downloadQR(){const a=document.createElement('a');a.href=qr.src;a.download='ZAKI-DJOUDI-QR.png';a.target='_blank';a.click()}
+async function copyPage(){
+  try{
+    await navigator.clipboard.writeText(location.href);
+    alert("تم نسخ رابط الصفحة");
+  }catch(e){
+    prompt("انسخ الرابط:", location.href);
+  }
+}
+
+async function sharePage(){
+  if(navigator.share){
+    try{
+      await navigator.share({
+        title:"Zaki Djoudi.Com",
+        text:"جميع حسابات Zaki Djoudi في مكان واحد",
+        url:location.href
+      });
+    }catch(e){}
+  }else{
+    copyPage();
+  }
+}
+
+function downloadQR(){
+  const a=document.createElement("a");
+  a.href=qr.src;
+  a.download="ZAKI-DJOUDI-QR.png";
+  a.target="_blank";
+  a.click();
+}
 </script>
 </body>
 </html>
